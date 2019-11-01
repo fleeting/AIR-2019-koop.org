@@ -1,0 +1,8 @@
+mu-plugins/
+uploads/
+upgrade/
+mysql.sql
+advanced-cache.php
+**/.DS_Store
+**/dwsync.xml
+**_notes/**
