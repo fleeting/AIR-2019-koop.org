@@ -1,3 +1,10 @@
+# Ignore everything except specific files and directories.
+*
+!/wp-content/themes
+!/wp-content/plugins
+!/wp-content/index.php
+
+
 mu-plugins/
 uploads/
 upgrade/
