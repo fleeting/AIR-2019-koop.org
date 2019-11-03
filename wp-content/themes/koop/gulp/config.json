@@ -1,0 +1,6 @@
+{
+  "uglify": {
+    "preserveComments": "some"
+  },
+  "jshint_reporter": "jshint-stylish"
+}

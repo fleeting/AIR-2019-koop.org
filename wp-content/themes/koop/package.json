@@ -1,0 +1,38 @@
+{
+  "name": "koop",
+  "version": "1.0.0",
+  "description": "Redesign for KOOP as part of Knowbility AIR 2019.",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:fleeting/AIR-2019-koop.org.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Monkee-Boy and Willard Interactive",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "cssnano": "^3.10.0",
+    "cssstats": "^3.2.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-sizereport": "^1.2.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5",
+    "jshint-stylish": "^2.2.1",
+    "modernizr": "^3.6.0",
+    "postcss-import": "^11.1.0"
+  },
+  "dependencies": {
+    "del": "^3.0.0"
+  }
+}

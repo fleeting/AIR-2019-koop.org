@@ -1,0 +1,10 @@
+{
+  "minify": true,
+  "options": [
+    "setClasses",
+    "mq"
+  ],
+  "feature-detects": [
+    "test/touchevents"
+  ]
+}
