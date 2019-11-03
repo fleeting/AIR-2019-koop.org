@@ -9,7 +9,7 @@
 				</div>
 				<div class="col-md-6 order-md-first">
 					<div class="logo_area">
-						<img class="logo" src="<?php echo get_template_directory_uri(); ?>/img/koop_logo_footer.svg" alt="KOOP Logo" />
+						<img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/dist/koop_logo_footer.svg" alt="KOOP Logo" />
 					</div>
 					<nav id="nav_footer" role="navigation" aria-label="Footer Navigation">
 						<?php wp_nav_menu( array( 'container_class' => 'menu_footer', 'theme_location' => 'footer', 'depth' => 1, 'menu_id'  => 'menu_footer', ) ); ?>

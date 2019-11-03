@@ -3,6 +3,10 @@
 !/wp-content/themes
 !/wp-content/plugins
 !/wp-content/index.php
+/wp-content/themes/koop/node_modules
+/wp-content/themes/koop/css/dist
+/wp-content/themes/koop/images/dist
+/wp-content/themes/koop/js/dist
 
 
 mu-plugins/

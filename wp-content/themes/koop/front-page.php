@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-	
+
 	<section id="featured_shows">
 		<div class="home featured_shows">
 			<div class="row">
@@ -8,14 +8,14 @@
 				</div>
 				<?php
 					//GET DATA
-					
-					
+
+
 					//SHOW DATA
 					echo '
 						<div class="col-lg-4">
 							<div class="featured_show">
 								<div class="image">
-									<img class="" src="' . get_template_directory_uri() .'/img/fpo-show.jpg" alt="FPO Show" />
+									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO Show" />
 								</div>
 								<p class="date">Tuesday 10/15, 11:00am</p>
 								<div class="info">
@@ -27,7 +27,7 @@
 						<div class="col-lg-4">
 							<div class="featured_show">
 								<div class="image">
-									<img class="" src="' . get_template_directory_uri() .'/img/fpo-show.jpg" alt="FPO Show" />
+									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO Show" />
 								</div>
 								<p class="date">Tuesday 10/15, 11:00am</p>
 								<div class="info">
@@ -39,7 +39,7 @@
 						<div class="col-lg-4">
 							<div class="featured_show">
 								<div class="image">
-									<img class="" src="' . get_template_directory_uri() .'/img/fpo-show.jpg" alt="FPO Show" />
+									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO Show" />
 								</div>
 								<p class="date">Tuesday 10/15, 11:00am</p>
 								<div class="info">
@@ -53,7 +53,7 @@
 			</div>
 		</div>
 	</section>
-	
+
 	<div class="home recents">
 		<div class="row">
 			<div class="col-md-6">
@@ -61,8 +61,8 @@
 					<h2>Upcoming Events</h2>
 					<?php
 						//GET DATA
-						
-						
+
+
 						//SHOW DATA
 						echo '
 							<ul>
@@ -109,15 +109,15 @@
 					<h2>Latest News</h2>
 					<?php
 						//GET DATA
-						
-						
+
+
 						//SHOW DATA
 						echo '
 							<ul>
 								<li class="news_item">
 									<div class="row">
 										<div class="col-md-4 image">
-											<img class="" src="' . get_template_directory_uri() .'/img/fpo-show.jpg" alt="FPO News" />
+											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO News" />
 										</div>
 										<div class="col-md-8 text">
 											<div class="content">
@@ -131,7 +131,7 @@
 								<li class="news_item">
 									<div class="row">
 										<div class="col-md-4 image">
-											<img class="" src="' . get_template_directory_uri() .'/img/fpo-show.jpg" alt="FPO News" />
+											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO News" />
 										</div>
 										<div class="col-md-8 text">
 											<div class="content">
@@ -145,7 +145,7 @@
 								<li class="news_item">
 									<div class="row">
 										<div class="col-md-4 image">
-											<img class="" src="' . get_template_directory_uri() .'/img/fpo-show.jpg" alt="FPO News" />
+											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO News" />
 										</div>
 										<div class="col-md-8 text">
 											<div class="content">
@@ -163,8 +163,8 @@
 			</div>
 		</div>
 	</div>
-	
-	<?php 
+
+	<?php
 		//GET DATA FOR FEATURE
 
 		//SHOW FEATURE
@@ -188,7 +188,7 @@
 				</div>
 			</section>
 		';
-		
+
 		//GET DATA FOR SPONSORS
 
 		//SHOW SPONSORS
