@@ -1,0 +1,10 @@
+body, p { font-size: 1em; font-family: Helvetica, Arial, "sans-serif"; color: #58595b; line-height: 1.7; }
+p, h1, h2, h3, h4, h5, h6 { margin: 0px; padding: 0px; }
+p { margin-bottom: 25px; }
+h1 { margin-bottom: 12px; font-size: 2.77em; font-weight: bold; }
+h2 { margin-bottom: 12px; font-size: 2.33em; font-weight: bold; color: #231f20; }
+h3 { margin-bottom: 12px; font-size: 1.33em; color: #7f58a5; font-weight: bold; }
+h4 { margin-bottom: 10px; font-size: 1.11em; font-weight: bold; color: #231f20; }
+h5 { margin-bottom: 10px; font-size: 1.11em; font-weight: bold; color: #231f20; }
+h6 { margin-bottom: 5px; font-size: 1em; color: #7f58a5; font-weight: bold; }
+img { max-width: 100%; height: auto; }

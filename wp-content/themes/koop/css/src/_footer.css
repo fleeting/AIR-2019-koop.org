@@ -1,0 +1,30 @@
+#footer { padding: 52px 55px; background-color: #734d93; background-image: url("../../images/dist/footer_bg.jpg"); color: #fff; }
+#footer p { color: #ffffff; }
+#footer a { color: #fff; }
+#footer .logo_area { margin-bottom: 20px; }
+#footer .logo_area .logo { max-width: 92px; height: auto; }
+#footer .copyright { margin-top: 30px; margin-bottom: 4px; font-size: 14px; }
+#nav_footer ul { margin: 0px 0px 20px 0px; padding: 0px; }
+#nav_footer ul li { margin: 0px 20px 0px 0px; padding: 0px; list-style: none; display: inline-block; }
+#nav_footer ul li a { font-size: 1.1em; font-weight: bold; text-decoration: underline; }
+#nav_footer ul li a:hover { text-decoration: none; }
+.connect_label { padding-top: 6px; padding-right: 15px; float: left; }
+#nav_footer_social ul { margin: 0px 0px 20px 0px; padding: 0px; }
+#nav_footer_social ul li { margin: 0px 8px 0px 0px; padding: 0px; list-style: none; display: inline-block; }
+#footer h6 { font-size: 1.33em; color: #ffffff; }
+#footer .ginput_container { margin-top: 0px; }
+#footer .gform_wrapper { margin: 0px; }
+#footer .gform_wrapper label.gfield_label { font-size: .88em !important; font-weight: normal !important; }
+#footer .gform_wrapper .gform_footer input[type=submit] { border-color: #ffffff !important; color: #ffffff !important;  }
+#footer .gform_wrapper .gform_footer input[type=submit]:hover { background: #ffffff !important; color: #7f58a5 !important; }
+#footer .gform_wrapper .gfield_required { color: #ffffff; }
+
+/* === TABLET === */
+@media (min-width: 768px) and (max-width: 991px) {
+	#footer { padding: 42px 15px; }
+}
+
+/* === PHONE === */
+@media screen and (max-width:767px) {
+	#footer { padding: 42px 15px; }
+}

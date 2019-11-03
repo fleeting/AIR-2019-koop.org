@@ -1,0 +1,87 @@
+#header { background-color: #7f58a5; background-image: url("../../images/dist/hero_bg.jpg"); background-position: top center !important; }
+#header .topper { padding-left: 55px; padding-right: 55px; padding-top: 15px; padding-bottom: 15px; }
+#header .topper #launch_player { padding-left: 25px; padding-right: 25px; float: left; margin-right: 30px; }
+#header .topper .current_program p { margin-bottom: 0px; color: #ffffff; line-height: 1.4; }
+#header .topper .current_program p span.label { text-transform: uppercase; font-size: .88em; }
+#header .topper .current_program .show_thumbnail { width: 40px; height: auto; float: left; margin-right: 18px; }
+#header .topper .current_program { }
+#header .topper .donate { text-align: right; }
+#header .topper .donate .btn { padding-left: 25px; padding-right: 25px; }
+#header .main { background-color: #231f20; padding-left: 55px; padding-right: 55px; }
+#header .main .logo_area { padding: 10px 0px 10px 15px; }
+#header .main .logo_area .logo { max-width: 204px; height: auto; }
+#header .main .logo_area .btn-donate { margin-top: 6px; padding-left: 25px; padding-right: 25px; display: none; float: right; }
+#header .page_title { padding: 50px 0px; text-align: center; }
+#header .page_title h1 { margin: 0px; padding: 0px; color: #ffffff; }
+#header .main .navigation .dropdown-toggle::after { border: none !important; vertical-align: 0em; }
+
+.menu-container { padding-top: 10px; padding-bottom: 10px; text-align: right; }
+.menu-container:after { display: table; clear: both; content: ""; }
+.site-header-menu { display: none; font-size: 1em; }
+.main-navigation ul { margin: 0; padding: 0; list-style: none; }
+.main-navigation ul li { margin-right: 40px;}
+.main-navigation ul a, .main-navigation ul a:visited { color: #fff; border-bottom: 2px solid transparent; text-decoration: none; font-weight: bold; }
+.main-navigation ul a:hover { border-bottom: 2px solid; }
+.main-navigation ul ul { display: none; margin-top: 0px; margin-left: 25px; }
+.main-navigation ul ul { text-align: left; }
+.main-navigation ul ul a { color: #7f58a5; font-weight: normal; }
+.main-navigation ul ul ul { display: none; margin-left: 25px;}
+.no-js .site-header-menu, .site-header-menu.toggled-on { display: block; }
+.site-header-menu.toggled-on { margin-top: 10px; }
+.no-js .main-navigation ul, .main-navigation ul .sub-menu.toggled-on { display: block; }
+button.dropdown-toggle, button.menu-button { display: inline; background-color: transparent; border: 0; -webkit-appearance: none; -moz-appearance: none; cursor: pointer; font-family: "Font Awesome 5 Free"; content: "";}
+button.dropdown-toggle { position: absolute; right: 10px; margin-left: 10px; padding: 0px 2px 2px 2px; }
+.menu-button { float: none; padding: 0; color: #fff; }
+.menu-button:before, .menu-button.toggled-on:before { margin-right: 5px; padding-top: -10px; }
+.main-navigation a:focus, button.dropdown-toggle:focus, button.menu-button:focus { outline: 1px dotted grey; outline-offset: 2px; }
+.no-js .menu-button { display: none; }
+.dropdown-toggle:after { font-family: "Font Awesome 5 Free"; content: "\f078"; }
+.dropdown-toggle.toggled-on:after { font-family: "Font Awesome 5 Free"; content: "\f077"; }
+.menu-button:before { font-family: "Font Awesome 5 Pro"; font-size: 30px; font-weight: 300; content: "\f0c9"; }
+.menu-button.toggled-on:before { font-family: "Font Awesome 5 Pro"; font-weight: 300; content: "\f00d"; }
+.dropdown-toggle:after, .dropdown-toggle.toggled-on:after, .menu-button:before,.menu-button.toggled-on:before { font-weight: bold; }
+
+@media only screen and (min-width: 992px) {
+	button.menu-button { display: none; }
+	.menu-container { padding-top: 0; padding-bottom: 0; padding-left: 0; }
+	.site-header-menu { display: block; margin-left: 10px; }
+	.main-navigation ul { position: relative; float: right; }
+	.main-navigation ul li { position: relative; float: left; margin: 0; padding: 10px 25px; }
+	.no-js .main-navigation ul ul, .main-navigation ul ul { position: absolute; display: none; top: 100%; left: 0; margin-left: 0; padding: 0; padding-bottom: 5px; padding-top: 5px; background-color: #f5f5f5; border: 1px solid #c0c0c0; z-index: 999; }
+	.no-js .main-navigation ul ul li, .main-navigation ul ul li { float: none; width: 220px; padding: 4px 10px; }
+	.main-navigation ul .has-sub-menu > li { padding-right: 40px; }
+	.no-js .main-navigation ul ul ul, .main-navigation ul ul ul { top: -1px; left: 100%; margin-left: 0; margin-top: -5px; }
+	ul.sub-menu .dropdown-toggle { position: absolute; right: 10px; top: 4px; }
+	.main-navigation ul .dropdown-toggle:after { font-family: "Font Awesome 5 Free"; content: "\f078"; }
+	.main-navigation ul .dropdown-toggle.toggled-on:after { font-family: "Font Awesome 5 Free"; content: "\f077"; }
+	.main-navigation ul .dropdown-toggle:after, .main-navigation ul ul .dropdown-toggle:after, .main-navigation ul .dropdown-toggle.toggled-on:after, .main-navigation ul ul .dropdown-toggle.toggled-on:after { font-weight: bold; color: #fff; }
+	button.dropdown-toggle { position: inherit; right: auto; }
+	.main-navigation ul li:hover > ul { display: block; }
+}
+
+/* === LARGE DESKTOP === */
+@media (min-width: 1200px) {
+	#header .main .navigation { padding-top: 25px; text-align: right; }
+}
+
+/* === DESKTOP === */
+@media (min-width: 992px) and (max-width: 1199px) {
+	#header .main .navigation { padding-top: 25px; text-align: right; }
+}
+
+/* === TABLET === */
+@media (min-width: 768px) and (max-width: 991px) {
+	#header .topper { display: none; }
+	#header .main .logo_area .logo { max-width: 150px; }
+	#header .main .logo_area .btn-donate { display: block; }
+	#header .main { padding-left: 15px; padding-right: 15px; }
+}
+
+/* === PHONE === */
+@media screen and (max-width:767px) {
+	#header .topper { display: none; }
+	#header .main { position: static; }
+	#header .main .logo_area .logo { max-width: 150px; }
+	#header .main .logo_area .btn-donate { display: block; }
+	#header .main { padding-left: 15px; padding-right: 15px; }
+}

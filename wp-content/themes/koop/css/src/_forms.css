@@ -1,0 +1,5 @@
+.gform_wrapper label.gfield_label { font-size: .88em; font-weight: normal; }
+.gform_wrapper .top_label .gfield_label { margin-bottom: 2px; }
+.gform_wrapper input:not([type=radio]):not([type=checkbox]):not([type=submit]):not([type=button]):not([type=image]):not([type=file]) { color: #58595b; }
+.gform_wrapper .gform_footer input[type=submit] { padding: 8px 30px !important; border: 2px solid #7f58a5 !important; background: none !important; color: #7f58a5 !important; font-size: .88em !important; font-weight: bold !important; }
+.gform_wrapper .gform_footer input[type=submit]:hover { background: #7f58a5 !important; color: #ffffff !important; }
