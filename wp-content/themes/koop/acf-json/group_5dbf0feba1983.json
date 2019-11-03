@@ -1,0 +1,51 @@
+{
+    "key": "group_5dbf0feba1983",
+    "title": "Programs",
+    "fields": [
+        {
+            "key": "field_5dbf1643a8e11",
+            "label": "Short Description",
+            "name": "short_description",
+            "type": "text",
+            "instructions": "One line of text used when featuring a program on the home page and on the listing page.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": 120
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "programs"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "excerpt",
+        "discussion",
+        "comments",
+        "author",
+        "format",
+        "page_attributes",
+        "send-trackbacks"
+    ],
+    "active": 1,
+    "description": "",
+    "modified": 1572810911
+}
