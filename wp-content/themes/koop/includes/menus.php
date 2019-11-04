@@ -3,4 +3,3 @@
 register_nav_menu('primary', 'Primary Menu');
 //register_nav_menu('mobile', 'Mobile Menu');
 register_nav_menu('footer', 'Footer Menu');
-register_nav_menu('footer-social', 'Footer Menu: Social');
