@@ -10,7 +10,7 @@
 
 				<div class="col-md-6 order-md-first">
 					<div class="logo_area">
-						<img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/dist/koop_logo_footer.svg" alt="KOOP Logo">
+						<img class="logo" src="<?= get_template_directory_uri(); ?>/images/dist/koop_logo_footer.svg" alt="KOOP Logo">
 					</div>
 
 					<nav id="nav_footer" role="navigation" aria-label="Footer Navigation">
@@ -37,6 +37,8 @@
 					</div>
 
 					<p class="copyright"><?php the_field('copyright', 'option'); ?></p>
+
+					<p class="copyright">Site developed with ♥ as part of AIR - Powered by <a href="https://knowbility.org/" title="Knowbility"><span style="top: -6px; position: relative;"><img class="logo" src="<?= get_template_directory_uri(); ?>/images/dist/knowbility-logo.svg" alt="Knowbility Logo" width="105px"></span></a></p>
 				</div>
 			</div>
 		</footer>
