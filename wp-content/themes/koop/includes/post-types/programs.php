@@ -31,12 +31,14 @@ function cpt_programs() {
 		'items_list_navigation' => 'Programs list navigation',
 		'filter_items_list'     => 'Filter programs list',
 	);
+
 	$rewrite = array(
 		'slug'                  => 'programs',
 		'with_front'            => true,
 		'pages'                 => true,
 		'feeds'                 => true,
 	);
+
 	$args = array(
 		'label'                 => 'Program',
 		'description'           => 'Scheduled programs on KOOP.',
@@ -58,7 +60,8 @@ function cpt_programs() {
 		'capability_type'       => 'page',
 		'show_in_rest'          => true,
 	);
-	register_post_type( 'programs', $args );
 
+	register_post_type( 'programs', $args );
 }
+
 add_action( 'init', 'cpt_programs', 0 );

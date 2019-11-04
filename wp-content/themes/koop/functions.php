@@ -7,4 +7,4 @@ require_once( trailingslashit( get_template_directory() ). 'includes/menus.php')
 require_once( trailingslashit( get_template_directory() ). 'includes/enqueue.php');
 require_once( trailingslashit( get_template_directory() ). 'includes/acf.php');
 //require_once( trailingslashit( get_template_directory() ). 'includes/shortcodes.php');
-require_once( trailingslashit( get_template_directory() ). 'includes/post_types.php');
+require_once( trailingslashit( get_template_directory() ). 'includes/post-types.php');

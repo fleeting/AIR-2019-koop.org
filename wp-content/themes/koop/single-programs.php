@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<!-- TODO: Just dumping out all the data for now. Need to style this page pending suggestions from Design. -->
+
 <section id="primary" class="content-area">
 	<main id="main" class="site-main">
 		<div class="container" role="main">
