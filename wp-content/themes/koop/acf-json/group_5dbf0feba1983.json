@@ -3,6 +3,25 @@
     "title": "Programs",
     "fields": [
         {
+            "key": "field_5dc05d44fd8d6",
+            "label": "Hosts",
+            "name": "hosts",
+            "type": "text",
+            "instructions": "Comma separated list of hosts.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5dbf1643a8e11",
             "label": "Short Description",
             "name": "short_description",
@@ -20,6 +39,219 @@
             "prepend": "",
             "append": "",
             "maxlength": 120
+        },
+        {
+            "key": "field_5dc05886bea66",
+            "label": "Featured Image",
+            "name": "featured_image",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_5dc05927bea67",
+            "label": "Social Networks",
+            "name": "social_networks",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5dc0593abea68",
+                    "label": "Facebook URL",
+                    "name": "facebook_url",
+                    "type": "url",
+                    "instructions": "Include the full url to your Facebook page.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5dc0594abea69",
+                    "label": "Twitter URL",
+                    "name": "twitter_url",
+                    "type": "url",
+                    "instructions": "Include the full url to your Twitter profile.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5dc05958bea6a",
+                    "label": "Instagram URL",
+                    "name": "instagram_url",
+                    "type": "url",
+                    "instructions": "Include the full url to your Instagram profile.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                }
+            ]
+        },
+        {
+            "key": "field_5dc0598adaaef",
+            "label": "Contact Info",
+            "name": "contact_info",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_5dc05992daaf0",
+                    "label": "Email Address",
+                    "name": "email_address",
+                    "type": "email",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_5dc0599ddaaf1",
+                    "label": "Mailing Address",
+                    "name": "mailing_address",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "br"
+                }
+            ]
+        },
+        {
+            "key": "field_5dc05e829a711",
+            "label": "Show Schedule",
+            "name": "show_schedule",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add Show",
+            "sub_fields": [
+                {
+                    "key": "field_5dc05f199a712",
+                    "label": "Day",
+                    "name": "day",
+                    "type": "date_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "l",
+                    "return_format": "l",
+                    "first_day": 0
+                },
+                {
+                    "key": "field_5dc05f2a9a713",
+                    "label": "Start Time",
+                    "name": "start_time",
+                    "type": "time_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "g:i a",
+                    "return_format": "g:i a"
+                },
+                {
+                    "key": "field_5dc05f4b9a714",
+                    "label": "End Time",
+                    "name": "end_time",
+                    "type": "time_picker",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "display_format": "g:i a",
+                    "return_format": "g:i a"
+                }
+            ]
         }
     ],
     "location": [
@@ -47,5 +279,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1572810911
+    "modified": 1572888439
 }
