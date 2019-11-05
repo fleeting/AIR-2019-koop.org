@@ -2,10 +2,10 @@
 <html <?php language_attributes(); ?>>
 <head>
 
-	<meta charset="<?php bloginfo( 'charset' ); ?>" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<link rel="profile" href="https://gmpg.org/xfn/11" />
-	<link rel="shortcut icon" href="favicon.png" />
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="shortcut icon" href="favicon.png">
 
 	<?php wp_head(); ?>
 </head>
@@ -19,7 +19,7 @@
 					<a id="launch_player" class="btn btn-outline-light" title="Open Streaming Player" href="#"><i class="fal fa-play"></i> Listen Live</a>
 
 					<div class="current_program">
-						<img class="show_thumbnail" src="<?php echo get_template_directory_uri(); ?>/images/dist/fpo-program-150.png" alt="Monkeeying Around" />
+						<img class="show_thumbnail" src="<?php echo get_template_directory_uri(); ?>/images/dist/fpo-program-150.png" alt="Monkeeying Around">
 						<p><span class="label">Now Playing</span><br /><strong>Monkeeing Around</strong> | Dat Moustache by James Fleeting</p>
 					</div>
 				</div>
@@ -33,8 +33,8 @@
 		<div class="main">
 			<div class="row">
 				<div class="col-lg-3 col-md-10 col-sm-10 col-10 logo_area">
-					<a class="btn btn-outline-light btn-donate" title="Donate" href="#"><i class="fal fa-piggy-bank"></i> Donate</a>
-					<a href="/" title="KOOP Radio Homepage"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/dist/koop_logo_header.svg" alt="KOOP Logo" /></a>
+					<a class="btn btn-outline-light btn-donate" title="Help support KOOP Radio with a donation." href="#"><i class="fal fa-piggy-bank"></i> Donate</a>
+					<a href="/" title="KOOP Radio Homepage"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/dist/koop_logo_header.svg" alt="KOOP Logo"></a>
 				</div>
 
 				<div class="col-lg-9 col-md-12 col-sm-12 col-12 navigation">
@@ -62,30 +62,46 @@
 
 		<?php
 			if (is_front_page()) {
-				//GET DATA FOR FEATURE
+				$args = array (
+					'post_type' => array( 'homepage_hero' ),
+					'post_status' => array( 'publish' ),
+					'posts_per_page' => 1,
+					'order' => 'DESC',
+					'orderby' => 'date',
+				);
 
-				//SHOW FEATURE
-				echo '
-					<section>
-						<div class="home feature">
-							<div class="row">
-								<div class="col-md-6 image">
-									<div class="content">
-										<img src="/wp-content/uploads/2019/10/austin-skyline-1.jpg" alt="FPO Image" />
+				$homepage_hero = new WP_Query( $args );
+
+				if ( $homepage_hero->have_posts() ) {
+					while ( $homepage_hero->have_posts() ) { $homepage_hero->the_post(); ?>
+						<section>
+							<div class="home feature">
+								<div class="row">
+									<div class="col-md-6 image">
+										<div class="content">
+											<?php $hero_image = get_field( 'image' ); ?>
+											<img src="<?= $hero_image['url']; ?>" alt="<?= $hero_image['alt']; ?>">
+										</div>
 									</div>
-								</div>
-								<div class="col-md-6 text">
-									<div class="content">
-										<h1>Live Seance Benefiting KOOP Radio</h1>
-										<p class="date"><strong>Thursday, October 24th at 7:00pm</strong></p>
-										<p>On Thursday, October 24th at 7 PM, join us at the Museum of Human Achievement as A. Lucio and Jake Cordero of Austin Seance demonstrate tools used by working mediums and then employ those tools in...</p>
-										<a class="btn btn-outline-light" title="Live Seance Benefiting KOOP Radio" href="#">Visit Event</a>
+									<div class="col-md-6 text">
+										<div class="content">
+											<h1><?= the_title(); ?></h1>
+											<?php if(!empty(get_field( 'sub_title' ))) { ?><p class="date"><strong><?= get_field( 'sub_title' ); ?></strong></p><?php } ?>
+
+											<p><?= get_field( 'description' ); ?></p>
+
+											<?php if(!empty(get_field( 'button_text' )) && !empty(get_field( 'button_link' ))) { ?>
+												<a class="btn btn-outline-light" title="More information on <?= the_title(); ?>" href="<?= get_field( 'button_link' ); ?>"><?= get_field( 'button_text' ); ?></a>
+											<?php } ?>
+										</div>
 									</div>
 								</div>
 							</div>
-						</div>
-					</section>
-				';
+						</section>
+					<?php }
+				}
+
+				wp_reset_postdata();
 			} else {
 				echo '
 					<div class="page_title">
