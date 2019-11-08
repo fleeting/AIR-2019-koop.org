@@ -1,6 +1,6 @@
 <?php
 
-	get_header();
+	get_header(); 
 ?>
 
 <section id="primary" class="content-area">
@@ -16,15 +16,11 @@
 
 				endwhile; // End of the loop.
 			?>
-
-			<?php get_template_part( 'partials/page-builder' ); ?>
 		</div>
-
-
 	</main><!-- #main -->
 </section><!-- #primary -->
 
-<?php
+<?php 
 	//GET DATA FOR FEATURE
 
 	//SHOW FEATURE
