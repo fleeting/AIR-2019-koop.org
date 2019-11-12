@@ -1,0 +1,18 @@
+.logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.logos > * {
+  width: 50%;
+  padding: 15px 30px;
+}
+
+@media (min-width: 768px) {
+  .logos > * {
+    width: 20%;
+    padding: 30px 60px;
+  }
+}

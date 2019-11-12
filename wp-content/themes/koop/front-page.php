@@ -192,23 +192,6 @@
 		//GET DATA FOR SPONSORS
 
 		//SHOW SPONSORS
-		echo '
-			<section>
-				<div class="home sponsors">
-					<div class="row">
-						<div class="col-md-6 leadin">
-							<div class="content">
-								<h2>Our Sponsors</h2>
-								<p>All product and company names are trademarks™ or registered® trademarks of their respective holders. Use of them does not imply any affiliation with or endorsement by them.</p>
-							</div>
-						</div>
-						<div class="col-12 logos">
-							LIST LOGOS
-						</div>
-					</div>
-				</div>
-			</section>
-		';
-	?>
+		get_template_part( 'partials/sponsors' ); ?>
 
 <?php get_footer(); ?>
