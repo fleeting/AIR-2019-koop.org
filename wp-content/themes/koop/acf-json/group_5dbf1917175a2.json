@@ -294,6 +294,13 @@
                 "operator": "==",
                 "value": "programs"
             }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
         ]
     ],
     "menu_order": 0,
@@ -308,9 +315,11 @@
         "comments",
         "format",
         "page_attributes",
+        "categories",
+        "tags",
         "send-trackbacks"
     ],
     "active": 1,
     "description": "",
-    "modified": 1573674345
+    "modified": 1573680175
 }
