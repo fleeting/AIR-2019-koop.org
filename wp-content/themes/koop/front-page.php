@@ -165,33 +165,30 @@
 	</div>
 
 	<?php
-		//GET DATA FOR FEATURE
-
 		//SHOW FEATURE
+		/* TODO: Get this hooked up in the admin somewhere. */
 		echo '
 			<section>
 				<div class="home callout">
 					<div class="row">
 						<div class="col-md-6 image">
 							<div class="content">
-								<img src="/wp-content/uploads/2019/10/austin-skyline-1.jpg" alt="FPO Image" />
+							<img src="/wp-content/uploads/2019/11/news_3.jpg" alt="Graffiti mural of Austin, Texas">
 							</div>
 						</div>
+
 						<div class="col-md-6 text">
 							<div class="content">
-								<h2>Mauris laoreet dictum massa in egestas lorem</h2>
-								<p>Mauris laoreet dictum massa in egestas lorem. Nulla nec sapien elit. Sed lacinia neque id erat laoreet fermentum.</p>
-								<a class="btn btn-outline-light" title="" href="#">Learn More</a>
+								<h2>Donate to KOOP</h2>
+								<p>For 25 years KOOP 91.7 FM has been training community volunteers in the art of broadcasting so they can share their passions as regards music and public affairs with their neighbors near and far. We are only able to do this with financial support from our listeners. Help KOOP keep community radio alive in Austin!</p>
+								<a class="btn btn-outline-light" href="/donate">Donate Today</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
-		';
+		'; ?>
 
-		//GET DATA FOR SPONSORS
-
-		//SHOW SPONSORS
-		get_template_part( 'partials/sponsors' ); ?>
+		<?php get_template_part( 'partials/sponsors' ); ?>
 
 <?php get_footer(); ?>

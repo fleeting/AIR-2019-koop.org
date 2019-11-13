@@ -1,53 +1,42 @@
-<?php
-
-	get_header();
-?>
-
-<section id="primary" class="content-area">
-	<main id="main" class="site-main">
-		<div class="container" role="main">
-			<?php
-				/* Start the Loop */
-				while ( have_posts() ) :
-					the_post();
-
-
-					echo the_content();
-
-				endwhile; // End of the loop.
-			?>
-
-			<?php get_template_part( 'partials/page-builder' ); ?>
-		</div>
-
-
-	</main><!-- #main -->
-</section><!-- #primary -->
+<?php get_header(); ?>
 
 <?php
-	//GET DATA FOR FEATURE
+/* Start the Loop */
+while ( have_posts() ) :
+	the_post(); ?>
 
-	//SHOW FEATURE
-	echo '
+	<section id="primary" class="content-area">
+		<main id="main" class="site-main">
+			<div class="container" role="main">
+
+					<?= the_content(); ?>
+
+				<?php get_template_part( 'partials/page-builder' ); ?>
+			</div>
+		</main><!-- #main -->
+	</section><!-- #primary -->
+
+	<?php if(!empty(get_field( 'title' ))): ?>
 		<section>
 			<div class="home callout">
 				<div class="row">
 					<div class="col-md-6 image">
 						<div class="content">
-							<img src="/wp-content/uploads/2019/10/austin-skyline-1.jpg" alt="FPO Image" />
+							<?php $image = get_field( 'image' ); ?>
+							<img src="<?= esc_url($image['url']); ?>" alt="<?= esc_attr($image['alt']); ?>">
 						</div>
 					</div>
 					<div class="col-md-6 text">
 						<div class="content">
-							<h2>Mauris laoreet dictum massa in egestas lorem</h2>
-							<p>Mauris laoreet dictum massa in egestas lorem. Nulla nec sapien elit. Sed lacinia neque id erat laoreet fermentum.</p>
-							<a class="btn btn-outline-light" title="" href="#">Learn More</a>
+							<h2><?= get_field( 'title' ); ?></h2>
+							<p><?= get_field( 'description' ); ?></p>
+							<a class="btn btn-outline-light" href="<?= get_field( 'button_link' ); ?>"><?= get_field( 'button_text' ); ?></a>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
-	';
-?>
+	<?php endif; ?>
+<?php endwhile; // End of the loop. ?>
 
 <?php get_footer(); ?>
