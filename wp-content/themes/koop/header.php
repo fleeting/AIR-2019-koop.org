@@ -25,7 +25,7 @@
 				</div>
 
 				<div class="col-md-4 donate">
-					<a class="btn btn-outline-light" title="Donate" href="#"><i class="fal fa-piggy-bank"></i> Donate</a>
+					<a class="btn btn-outline-light" title="Donate" href="/donate"><i class="fal fa-piggy-bank"></i> Donate</a>
 				</div>
 			</div>
 		</div>
