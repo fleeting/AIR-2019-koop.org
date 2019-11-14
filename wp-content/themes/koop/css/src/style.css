@@ -99,3 +99,11 @@ li.news_item .text a:hover { text-decoration: none; color: #231f20; }
 	.home.callout { margin-bottom: 40px; padding: 20px 15px 20px 15px;  }
 	.home.callout .image img { margin-bottom: 0px; }
 }
+
+button.able-button-handler-slower, button.able-button-handler-faster, .able-duration, .able-speed, button.able-button-handler-restart, button.able-button-handler-forward, button.able-button-handler-rewind, .able-seekbar-wrapper {
+  display: none;
+}
+
+.able-status-bar {
+	height: 2.5em;
+}

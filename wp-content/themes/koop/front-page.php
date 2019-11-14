@@ -121,7 +121,7 @@
 										</div>
 										<div class="col-md-8 text">
 											<div class="content">
-												<p class="meta"><span class="flag"><a href="" title="">Announcements</a></span><span class="date">October 9, 2019</span></p>
+												<p class="meta"><span class="flag">Announcements</span><span class="date">October 9, 2019</span></p>
 												<h3><a href="" title="">Class aptent taciti socios litora</a></h3>
 												<p>Nulla nec sapien elit. Sed lacinia neque id erat laoreet fermentum. Vivamus commodo, ante...</p>
 											</div>
@@ -135,7 +135,7 @@
 										</div>
 										<div class="col-md-8 text">
 											<div class="content">
-												<p class="meta"><span class="flag"><a href="" title="">Announcements</a></span><span class="date">October 9, 2019</span></p>
+												<p class="meta"><span class="flag">Announcements</span><span class="date">October 9, 2019</span></p>
 												<h3><a href="" title="">Class aptent taciti socios litora</a></h3>
 												<p>Nulla nec sapien elit. Sed lacinia neque id erat laoreet fermentum. Vivamus commodo, ante...</p>
 											</div>
@@ -149,7 +149,7 @@
 										</div>
 										<div class="col-md-8 text">
 											<div class="content">
-												<p class="meta"><span class="flag"><a href="" title="">Announcements</a></span><span class="date">October 9, 2019</span></p>
+												<p class="meta"><span class="flag">Announcements</span><span class="date">October 9, 2019</span></p>
 												<h3><a href="" title="">Class aptent taciti socios litora</a></h3>
 												<p>Nulla nec sapien elit. Sed lacinia neque id erat laoreet fermentum. Vivamus commodo, ante...</p>
 											</div>

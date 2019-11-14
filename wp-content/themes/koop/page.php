@@ -9,7 +9,7 @@ while ( have_posts() ) :
 		<main id="main" class="site-main">
 			<div class="container" role="main">
 
-					<?= the_content(); ?>
+				<?= the_content(); ?>
 
 				<?php get_template_part( 'partials/page-builder' ); ?>
 			</div>

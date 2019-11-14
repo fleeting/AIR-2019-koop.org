@@ -286,6 +286,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "page"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "page-news.php"
             }
         ],
         [
@@ -293,6 +298,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "programs"
+            },
+            {
+                "param": "post_template",
+                "operator": "!=",
+                "value": "page-news.php"
             }
         ]
     ],
@@ -306,13 +316,9 @@
         "excerpt",
         "discussion",
         "comments",
-        "format",
-        "page_attributes",
-        "categories",
-        "tags",
         "send-trackbacks"
     ],
     "active": 1,
     "description": "",
-    "modified": 1573747015
+    "modified": 1573748950
 }
