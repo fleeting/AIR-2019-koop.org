@@ -294,13 +294,6 @@
                 "operator": "==",
                 "value": "programs"
             }
-        ],
-        [
-            {
-                "param": "post_type",
-                "operator": "==",
-                "value": "post"
-            }
         ]
     ],
     "menu_order": 0,
@@ -321,5 +314,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1573680175
+    "modified": 1573747015
 }
