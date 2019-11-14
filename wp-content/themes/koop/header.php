@@ -16,11 +16,11 @@
 		<div class="topper">
 			<div class="row">
 				<div class="col-md-8 now-playing">
-					<a id="launch_player" class="btn btn-outline-light" title="Open Streaming Player" href="#"><i class="fal fa-play"></i> Listen Live</a>
+					<a id="launch_player" class="btn btn-outline-light" title="Listen to KOOP Radio live on the web" href="/listen-live/"><i class="fal fa-play"></i> Listen Live</a>
 
 					<div class="current_program">
-						<img class="show_thumbnail" src="<?php echo get_template_directory_uri(); ?>/images/dist/fpo-program-150.png" alt="Monkeeying Around">
-						<p><span class="label">Now Playing</span><br /><strong>Monkeeing Around</strong> | Dat Moustache by James Fleeting</p>
+						<img class="show_thumbnail" src="<?php echo get_template_directory_uri(); ?>/images/dist/fpo-program-150.png" alt="Austin Artists show poster.">
+						<p><span class="label">Now Playing</span><br /><strong>Austin Artists</strong> | Monday 1pm - 1:30pm</p>
 					</div>
 				</div>
 
