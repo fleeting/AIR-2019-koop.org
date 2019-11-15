@@ -13,9 +13,6 @@
 						<img src="<?= $featured_image['url']; ?>" alt="<?= $featured_image['alt']; ?>">
 					</div>
 					<div class="program-right">
-
-
-
 		        <?php
 		        if( have_rows( 'show_schedule' ) ):
 		          echo '<h3>Show Times</h3> <ul>';
@@ -31,8 +28,14 @@
 
 		        echo '<h3>Social Networks</h3> <ul>';
 		        foreach($social_networks as $network => $profile_url):
-		          if(!empty($profile_url)):
-		            echo '<li>' . $profile_url . '</li>';
+							if(!empty($profile_url)):
+								if($network === 'facebook_url') { ?>
+		            	<li><a href="<?= $profile_url; ?>" title="Like us on Facebook">Facebook</a></li>
+								<?php } elseif($network === 'twitter_url') { ?>
+									<li><a href="<?= $profile_url; ?>" title="Follow us on Twitter">Twitter</a></li>
+								<?php } elseif($network === 'instagram_url') { ?>
+									<li><a href="<?= $profile_url; ?>" title="Follow us on Instagram">Instagram</a></li>
+								<?php }
 		          endif;
 		        endforeach;
 		        echo '</ul>';
@@ -49,7 +52,6 @@
 				</div>
 
 				<div class="description">
-					<?php echo get_field( 'short_description' ); ?>
 	        <?php get_template_part( 'partials/page-builder' ); ?>
 				</div>
 
