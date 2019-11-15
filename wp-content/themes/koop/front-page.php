@@ -15,7 +15,7 @@
 						<div class="col-lg-4">
 							<div class="featured_show">
 								<div class="image">
-									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO Show" />
+									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
 								</div>
 								<p class="date">Tuesday 10/15, 11:00am</p>
 								<div class="info">
@@ -27,7 +27,7 @@
 						<div class="col-lg-4">
 							<div class="featured_show">
 								<div class="image">
-									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO Show" />
+									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
 								</div>
 								<p class="date">Tuesday 10/15, 11:00am</p>
 								<div class="info">
@@ -39,7 +39,7 @@
 						<div class="col-lg-4">
 							<div class="featured_show">
 								<div class="image">
-									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO Show" />
+									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
 								</div>
 								<p class="date">Tuesday 10/15, 11:00am</p>
 								<div class="info">
@@ -117,7 +117,7 @@
 								<li class="news_item">
 									<div class="row">
 										<div class="col-md-4 image">
-											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO News" />
+											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
 										</div>
 										<div class="col-md-8 text">
 											<div class="content">
@@ -131,7 +131,7 @@
 								<li class="news_item">
 									<div class="row">
 										<div class="col-md-4 image">
-											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO News" />
+											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
 										</div>
 										<div class="col-md-8 text">
 											<div class="content">
@@ -145,7 +145,7 @@
 								<li class="news_item">
 									<div class="row">
 										<div class="col-md-4 image">
-											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO News" />
+											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
 										</div>
 										<div class="col-md-8 text">
 											<div class="content">
