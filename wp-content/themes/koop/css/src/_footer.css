@@ -11,7 +11,7 @@
 .connect_label { padding-top: 6px; padding-right: 15px; float: left; }
 #nav_footer_social ul { margin: 0px 0px 20px 0px; padding: 0px; }
 #nav_footer_social ul li { margin: 0px 8px 0px 0px; padding: 0px; list-style: none; display: inline-block; }
-#footer h6 { font-size: 1.33em; color: #ffffff; }
+#footer h2 { font-size: 1.33em; color: #ffffff; }
 #footer .ginput_container { margin-top: 0px; }
 #footer .gform_wrapper { margin: 0px; }
 #footer .gform_wrapper label.gfield_label { font-size: .88em !important; font-weight: normal !important; }

@@ -3,7 +3,7 @@
 		<footer id="footer" role="contentinfo" class="bg_fill">
 			<div class="row">
 				<div class="col-md-6 order-md-last">
-					<h6>Sign Up For Our Newsletter</h6>
+					<h2 class="h6">Sign Up For Our Newsletter</h2>
 					<p style="margin-bottom: 0px;">All fields with an * are required.</p>
 					<?php echo do_shortcode('[gravityform id=1 title=false description=false ajax=true tabindex=100]'); ?>
 				</div>

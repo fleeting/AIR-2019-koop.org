@@ -10,7 +10,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+	<a class="skip-link" href="#page">Skip to main content</a>
 
 	<header id="header" class="bg_fill" role="banner">
 		<div class="topper">
