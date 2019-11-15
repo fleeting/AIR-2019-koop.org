@@ -102,6 +102,13 @@
 				}
 
 				wp_reset_postdata();
+			} elseif (is_singular('programs')) {
+				echo '
+					<div class="page_title">
+						<h1>' . get_the_title() .'</h1>
+						<p><strong>Host(s)</strong>: ' . get_field('hosts') . '</p>
+					</div>
+				';
 			} else {
 				echo '
 					<div class="page_title">

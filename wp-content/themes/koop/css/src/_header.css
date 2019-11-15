@@ -13,6 +13,7 @@
 #header .main .logo_area .btn-donate { margin-top: 6px; padding-left: 25px; padding-right: 25px; display: none; float: right; }
 #header .page_title { padding: 50px 0px; text-align: center; }
 #header .page_title h1 { margin: 0px; padding: 0px; color: #ffffff; }
+#header .page_title p { color: #ffffff; }
 #header .main .navigation .dropdown-toggle::after { border: none !important; vertical-align: 0em; }
 
 .menu-container { padding-top: 10px; padding-bottom: 10px; text-align: right; }
