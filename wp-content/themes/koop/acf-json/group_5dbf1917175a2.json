@@ -298,11 +298,6 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "programs"
-            },
-            {
-                "param": "post_template",
-                "operator": "!=",
-                "value": "page-news.php"
             }
         ]
     ],
@@ -320,5 +315,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1573748950
+    "modified": 1575313883
 }

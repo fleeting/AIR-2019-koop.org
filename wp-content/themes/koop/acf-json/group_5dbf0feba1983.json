@@ -126,6 +126,22 @@
                     },
                     "default_value": "",
                     "placeholder": ""
+                },
+                {
+                    "key": "field_5de576a13e8a5",
+                    "label": "Website",
+                    "name": "website_url",
+                    "type": "url",
+                    "instructions": "Include the full url to your external show website.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
                 }
             ]
         },
@@ -279,5 +295,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1573157267
+    "modified": 1575322058
 }

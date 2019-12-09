@@ -26,6 +26,7 @@
 		        <?php
 		        $social_networks = get_field( 'social_networks' );
 
+				if(!empty($social_networks['facebook_url']) || !empty($social_networks['twitter_url']) || !empty($social_networks['instagram_url'])):
 		        echo '<h3>Social Networks</h3> <ul>';
 		        foreach($social_networks as $network => $profile_url):
 							if(!empty($profile_url)):
@@ -39,6 +40,7 @@
 		          endif;
 		        endforeach;
 		        echo '</ul>';
+				endif;
 		        ?>
 
 		        <?php

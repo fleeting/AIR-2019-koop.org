@@ -24,6 +24,7 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="col-lg-4">
 							<div class="featured_show">
 								<div class="image">
@@ -36,6 +37,7 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="col-lg-4">
 							<div class="featured_show">
 								<div class="image">
@@ -173,7 +175,7 @@
 					<div class="row">
 						<div class="col-md-6 image">
 							<div class="content">
-							<img src="/wp-content/uploads/2019/11/news_3.jpg" alt="Graffiti mural of Austin, Texas">
+							<img src="/wp-content/uploads/2019/12/austin-howdy.jpg" alt="Graffiti mural of Austin, Texas">
 							</div>
 						</div>
 

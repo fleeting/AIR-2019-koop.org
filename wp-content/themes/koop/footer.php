@@ -5,12 +5,12 @@
 				<div class="col-md-6 order-md-last">
 					<h2 class="h6">Sign Up For Our Newsletter</h2>
 					<p style="margin-bottom: 0px;">All fields with an * are required.</p>
-					<?php echo do_shortcode('[gravityform id=1 title=false description=false ajax=true tabindex=100]'); ?>
+					<?php echo do_shortcode('[gravityform id=1 title=false description=false ajax=true]'); ?>
 				</div>
 
 				<div class="col-md-6 order-md-first">
 					<div class="logo_area">
-						<img class="logo" src="<?= get_template_directory_uri(); ?>/images/dist/koop_logo_footer.svg" alt="KOOP Logo">
+						<img class="logo" src="<?= get_template_directory_uri(); ?>/images/dist/koop_logo_footer.svg" alt="KOOP 91.7 FM">
 					</div>
 
 					<nav id="nav_footer" role="navigation" aria-label="Footer Navigation">
