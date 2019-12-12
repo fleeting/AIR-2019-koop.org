@@ -7,7 +7,6 @@
 
 }
 
-
 @media screen and (min-width:991px) {
   .program-box > * {
     width: 50%;
@@ -38,4 +37,39 @@
 
 .single-programs .description {
   margin: 30px;
+}
+
+.programs-schedule thead {
+  color: #fff;
+  background: #468080;
+}
+
+.programs-schedule thead th {
+  padding: 10px;
+  text-align: center;
+  font-size: 1.1em;
+  border: 1px solid #fff;
+}
+
+.programs-schedule thead th.active-day {
+  background: #7f58a5;
+}
+
+.schedule-cell {
+  width: 12.5%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.schedule-cell.active-day {
+  background: #e3d8ee;
+  border: 1px solid #fff;
+}
+
+.schedule-time-slot {
+  background-color: #eee;
+  text-transform: uppercase;
+  color: #1a2233;
+  font-weight: 700;
 }

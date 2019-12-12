@@ -26,6 +26,7 @@ while ( have_posts() ) :
 					'Sun' => $time,
 					'Mon' => $time,
 					'Tue' => $time,
+					'Wed' => $time,
 					'Thu' => $time,
 					'Fri' => $time,
 					'Sat' => $time
@@ -100,29 +101,29 @@ while ( have_posts() ) :
 					}
 				}
         ?>
-				<table>
+				<table class="programs-schedule">
 					<thead>
 						<tr>
-							<th>Time</th>
+							<th>&nbsp;</th>
 							<?php foreach($days as $day => $slots): ?>
-								<th><?= $day ?></th>
+								<th class="<?php if(date('D') === $day) { ?>active-day<?php } ?>"><?= $day ?></th>
 							<?php endforeach; ?>
 						</tr>
 					</thead>
 					<tbody>
 						<?php foreach($time as $time_text => $row): ?>
 							<tr>
-								<td><?= $time_text ?></td>
+								<td class="schedule-cell schedule-time-slot"><?= $time_text ?></td>
 								<?php foreach($days as $day => $programs): ?>
-									<td>
+									<td class="schedule-cell<?php if(date('D') === $day) { ?> active-day<?php } ?>">
 										<?php
 										usort($days[$day][$time_text], function($a, $b) {
 											return $a['start'] <=> $b['start'];
 										});
 
 										foreach($days[$day][$time_text] as $program): ?>
-											<a href="<?= $program['url'] ?>"><?= $program['title'] ?></a><br>
-											<?= $program['time'] ?><br>
+											<p><a href="<?= $program['url'] ?>"><?= $program['title'] ?></a><br>
+											<?= $program['time'] ?></p>
 										<?php endforeach; ?>
 									</td>
 								<?php endforeach; ?>
