@@ -109,6 +109,12 @@
 						<p><strong>Host(s)</strong>: ' . get_field('hosts') . '</p>
 					</div>
 				';
+			} elseif (is_archive('news')) {
+				echo '
+					<div class="page_title">
+						<h1>Latest News</h1>
+					</div>
+				';
 			} else {
 				echo '
 					<div class="page_title">

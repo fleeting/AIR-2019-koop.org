@@ -1,5 +1,8 @@
 <?php
 // Register Custom Post Type News
+
+add_theme_support('post-thumbnails');
+
 function cpt_news() {
 
 	$labels = array(
@@ -33,7 +36,7 @@ function cpt_news() {
 	);
 
 	$rewrite = array(
-		'slug'                  => 'News',
+		'slug'                  => 'news',
 		'with_front'            => true,
 		'pages'                 => true,
 		'feeds'                 => true,
@@ -43,8 +46,8 @@ function cpt_news() {
 		'label'                 => 'News',
 		'description'           => 'Scheduled News on KOOP.',
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'author', 'thumbnail' ),
-		'taxonomies'  => array( 'category' ),
+		'supports'              => array( 'title', 'editor', 'thumbnail' ),
+		'taxonomies'  					=> array( 'category' ),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
@@ -54,7 +57,7 @@ function cpt_news() {
 		'show_in_admin_bar'     => true,
 		'show_in_nav_menus'     => true,
 		'can_export'            => true,
-		'has_archive'           => false,
+		'has_archive'           => true,
 		'exclude_from_search'   => false,
 		'publicly_queryable'    => true,
 		'rewrite'               => $rewrite,
@@ -66,3 +69,16 @@ function cpt_news() {
 }
 
 add_action( 'init', 'cpt_news', 0 );
+
+add_filter('pre_get_posts', 'query_post_type');
+function query_post_type($query) {
+  if( is_category() ) {
+    $post_type = get_query_var('post_type');
+    if($post_type)
+        $post_type = $post_type;
+    else
+        $post_type = array('nav_menu_item', 'post', 'news'); // don't forget nav_menu_item to allow menus to work!
+    $query->set('post_type',$post_type);
+    return $query;
+    }
+}
