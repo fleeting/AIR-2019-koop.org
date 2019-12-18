@@ -15,7 +15,7 @@
 						<div class="col-lg-4">
 							<div class="featured_show">
 								<div class="image">
-									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO Show" />
+									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
 								</div>
 								<p class="date">Tuesday 10/15, 11:00am</p>
 								<div class="info">
@@ -24,10 +24,11 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="col-lg-4">
 							<div class="featured_show">
 								<div class="image">
-									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO Show" />
+									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
 								</div>
 								<p class="date">Tuesday 10/15, 11:00am</p>
 								<div class="info">
@@ -36,10 +37,11 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="col-lg-4">
 							<div class="featured_show">
 								<div class="image">
-									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO Show" />
+									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
 								</div>
 								<p class="date">Tuesday 10/15, 11:00am</p>
 								<div class="info">
@@ -117,7 +119,7 @@
 								<li class="news_item">
 									<div class="row">
 										<div class="col-md-4 image">
-											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO News" />
+											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
 										</div>
 										<div class="col-md-8 text">
 											<div class="content">
@@ -131,7 +133,7 @@
 								<li class="news_item">
 									<div class="row">
 										<div class="col-md-4 image">
-											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO News" />
+											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
 										</div>
 										<div class="col-md-8 text">
 											<div class="content">
@@ -145,7 +147,7 @@
 								<li class="news_item">
 									<div class="row">
 										<div class="col-md-4 image">
-											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="FPO News" />
+											<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
 										</div>
 										<div class="col-md-8 text">
 											<div class="content">
@@ -173,7 +175,7 @@
 					<div class="row">
 						<div class="col-md-6 image">
 							<div class="content">
-							<img src="/wp-content/uploads/2019/11/news_3.jpg" alt="Graffiti mural of Austin, Texas">
+							<img src="/wp-content/uploads/2019/12/austin-howdy.jpg" alt="Graffiti mural of Austin, Texas">
 							</div>
 						</div>
 

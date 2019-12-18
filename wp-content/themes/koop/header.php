@@ -10,7 +10,7 @@
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-	<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+	<a class="skip-link" href="#page">Skip to main content</a>
 
 	<header id="header" class="bg_fill" role="banner">
 		<div class="topper">
@@ -34,7 +34,7 @@
 			<div class="row">
 				<div class="col-lg-3 col-md-10 col-sm-10 col-10 logo_area">
 					<a class="btn btn-outline-light btn-donate" title="Help support KOOP Radio with a donation." href="#"><i class="fal fa-piggy-bank"></i> Donate</a>
-					<a href="/" title="KOOP Radio Homepage"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/dist/koop_logo_header.svg" alt="KOOP Logo"></a>
+					<a href="/" title="KOOP Radio Homepage"><img class="logo" src="<?php echo get_template_directory_uri(); ?>/images/dist/koop_logo_header.svg" alt="KOOP 91.7 FM"></a>
 				</div>
 
 				<div class="col-lg-9 col-md-12 col-sm-12 col-12 navigation">

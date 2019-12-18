@@ -101,6 +101,34 @@ li.news_item .text a:hover { text-decoration: none; color: #231f20; }
 	.home.callout .image img { margin-bottom: 0px; }
 }
 
+.btn-outline-light {
+	color: #fff;
+	border-color: #fff;
+}
+
+.skip-link {
+	margin: 0 auto;
+	position: absolute;
+	z-index: 20;
+	left: 0;
+	right: 0;
+	top: 1em;
+	width: 10em;
+	opacity: 1;
+	background: #fff;
+	color: #000;
+	padding: 20px 0;
+	width: 16em;
+	text-align: center;
+	font-size: 20px;
+	transition: transform 0.1875s ease-out, opacity 0.1875s ease-out, -webkit-transform 0.1875s ease-out;
+}
+
+.skip-link:not(:focus):not(:hover) {
+	transform: translateY(-4em);
+	opacity: 0;
+}
+
 button.able-button-handler-slower, button.able-button-handler-faster, .able-duration, .able-speed, button.able-button-handler-restart, button.able-button-handler-forward, button.able-button-handler-rewind, .able-seekbar-wrapper {
   display: none;
 }

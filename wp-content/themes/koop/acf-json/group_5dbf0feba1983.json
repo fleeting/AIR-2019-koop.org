@@ -126,6 +126,22 @@
                     },
                     "default_value": "",
                     "placeholder": ""
+                },
+                {
+                    "key": "field_5de576a13e8a5",
+                    "label": "Website",
+                    "name": "website_url",
+                    "type": "url",
+                    "instructions": "Include the full url to your external show website.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
                 }
             ]
         },
@@ -206,7 +222,7 @@
                     "key": "field_5dc05f199a712",
                     "label": "Day",
                     "name": "day",
-                    "type": "date_picker",
+                    "type": "select",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -215,9 +231,22 @@
                         "class": "",
                         "id": ""
                     },
-                    "display_format": "l",
-                    "return_format": "l",
-                    "first_day": 0
+                    "choices": {
+                        "Sun": "Sun",
+                        "Mon": "Mon",
+                        "Tue": "Tue",
+                        "Wed": "Wed",
+                        "Thu": "Thu",
+                        "Fri": "Fri",
+                        "Sat": "Sat"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 },
                 {
                     "key": "field_5dc05f2a9a713",
@@ -279,5 +308,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1573157267
+    "modified": 1576163407
 }
