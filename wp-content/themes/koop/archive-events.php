@@ -4,7 +4,7 @@
 		<div class="container" role="main">
 
 			<div class="col-md-12">
-				<section id="latest_news">
+				<section id="latest_events">
 
 					<?php
 					/* Start the Loop */

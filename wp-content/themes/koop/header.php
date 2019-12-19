@@ -107,15 +107,15 @@
 					<div class="page_title">
 						<h1>' . get_the_title() .'</h1>
 						<p><strong>Host(s)</strong>: ' . get_field('hosts') . '</p>
-					</div>
+				s	</div>
 				';
-			} elseif (is_archive('news')) {
+			} elseif (is_post_type_archive( 'news')) {
 				echo '
 					<div class="page_title">
 						<h1>Latest News</h1>
 					</div>
 				';
-			} elseif (is_archive('events')) {
+			} elseif (is_post_type_archive( 'events')) {
 				echo '
 					<div class="page_title">
 						<h1>Upcoming Events</h1>
