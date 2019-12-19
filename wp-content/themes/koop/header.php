@@ -115,6 +115,12 @@
 						<h1>Latest News</h1>
 					</div>
 				';
+			} elseif (is_archive('events')) {
+				echo '
+					<div class="page_title">
+						<h1>Upcoming Events</h1>
+					</div>
+				';
 			} else {
 				echo '
 					<div class="page_title">

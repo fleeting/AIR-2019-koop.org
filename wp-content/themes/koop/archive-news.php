@@ -5,7 +5,7 @@
 
 			<div class="col-md-12">
 				<section id="latest_news">
-					<?php get_template_part( 'partials/cat-select' ); ?>
+					<?php //get_template_part( 'partials/cat-select' ); ?>
 					<?php
 					/* Start the Loop */
 					while ( have_posts() ) :

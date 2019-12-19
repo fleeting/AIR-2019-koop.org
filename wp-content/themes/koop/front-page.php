@@ -62,53 +62,39 @@
 				<section id="upcoming_events">
 					<h2>Upcoming Events</h2>
 					<?php
-						//GET DATA
+						$args = array(
+							'post_type' => 'events',
+							'posts_per_page' => 3,
+						);
+						$loop = new WP_Query( $args ); ?>
+						<ul>
+						 <?php while ( $loop->have_posts() ) : $loop->the_post();
+						 // Load field value.
+						 $date = get_field('date_of_event');
+						 $day = date("D", strtotime($date));
+						 $md = date("m/d", strtotime($date));
+						 $time = date("g:i A", strtotime($date));?>
 
+								<li class="event_item">
+									<div class="row no-gutters">
+										<div class="col-md-3 date_info">
+											<?php echo $day ?><br /><span class="date"><?php echo $md ?></span><br /><?php echo $time ?>
+										</div>
+										<div class="col-md-9 text">
+											<h3><a href="<?php echo get_the_permalink(); ?>" title="<?php echo get_the_title(); ?>"><?php echo get_the_title(); ?></a></h3>
+											<p><?php echo get_field('excerpt'); ?>[...]</p>
+										</div>
+									</div>
+								</li>
 
-						//SHOW DATA
-						echo '
-							<ul>
-								<li class="event_item">
-									<div class="row no-gutters">
-										<div class="col-md-3 date_info">
-											Thu<br /><span class="date">10/17</span><br />4:00 pm
-										</div>
-										<div class="col-md-9 text">
-											<h3><a href="" title="">91.7 Beer Release</a></h3>
-											<p>We have teamed up with Black Star Co-op Pub & Brewery to bring you a super sessionable pale ale we...</p>
-										</div>
-									</div>
-								</li>
-								<li class="event_item">
-									<div class="row no-gutters">
-										<div class="col-md-3 date_info">
-											Thu<br /><span class="date">10/17</span><br />4:00 pm
-										</div>
-										<div class="col-md-9 text">
-											<h3><a href="" title="">91.7 Beer Release</a></h3>
-											<p>We have teamed up with Black Star Co-op Pub & Brewery to bring you a super sessionable pale ale we...</p>
-										</div>
-									</div>
-								</li>
-								<li class="event_item">
-									<div class="row no-gutters">
-										<div class="col-md-3 date_info">
-											Thu<br /><span class="date">10/17</span><br />4:00 pm
-										</div>
-										<div class="col-md-9 text">
-											<h3><a href="" title="">91.7 Beer Release</a></h3>
-											<p>We have teamed up with Black Star Co-op Pub & Brewery to bring you a super sessionable pale ale we...</p>
-										</div>
-									</div>
-								</li>
+								<?php endwhile; wp_reset_postdata(); ?>
 							</ul>
-						';
-					?>
+
 				</section>
 			</div>
 			<div class="col-md-6">
 				<section id="latest_news">
-					<h2><a href="/news">Latest News</a></h2>
+					<h2>Latest News</h2>
 					<?php
 						$args = array(
 							'post_type' => 'News',
