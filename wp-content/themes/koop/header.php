@@ -104,12 +104,16 @@
 
 				wp_reset_postdata();
 			} elseif (is_singular('programs')) {
-				echo '
-					<div class="page_title">
-						<h1>' . get_the_title() .'</h1>
-						<p><strong>Host(s)</strong>: ' . get_field('hosts') . '</p>
-				s	</div>
-				';
+				echo '<div class="page_title">';
+					echo '<h1>' . get_the_title() .'</h1>';
+					echo '<p>';
+						echo '<strong>Host(s)</strong>: ' . get_field('hosts');
+						$social_networks = get_field( 'social_networks' );
+						if(!empty($social_networks['website_url'])) {
+							echo '<br /><a href="' . $social_networks['website_url'] . '" title="Visit ' . get_the_title() . '\'s Website">Visit Our Website</a>';
+						}
+					echo '</p>';
+				echo '</div>';
 			} elseif (is_post_type_archive( 'news')) {
 				echo '
 					<div class="page_title">
