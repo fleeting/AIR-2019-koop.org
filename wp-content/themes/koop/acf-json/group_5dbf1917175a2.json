@@ -290,7 +290,7 @@
             {
                 "param": "post_template",
                 "operator": "!=",
-                "value": "page-news.php"
+                "value": "default"
             }
         ],
         [
@@ -315,5 +315,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1575313883
+    "modified": 1576876392
 }
