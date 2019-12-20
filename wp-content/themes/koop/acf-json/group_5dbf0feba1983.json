@@ -281,6 +281,25 @@
                     "return_format": "g:i a"
                 }
             ]
+        },
+        {
+            "key": "field_5dfd333313934",
+            "label": "DoubleTrack Show ID",
+            "name": "doubletrack_show_id",
+            "type": "text",
+            "instructions": "This is the ID unique to a show that comes across the API.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -308,5 +327,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1576163407
+    "modified": 1576874855
 }

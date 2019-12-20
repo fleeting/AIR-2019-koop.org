@@ -19,7 +19,7 @@
 					<a id="launch_player" class="btn btn-outline-light" title="Listen to KOOP Radio live on the web" href="/listen-live/"><i class="fal fa-play"></i> Listen Live</a>
 
 					<div class="current_program">
-						<img class="show_thumbnail" src="<?php echo get_template_directory_uri(); ?>/images/dist/fpo-program-150.png" alt="Austin Artists show poster.">
+						<?php /* <img class="show_thumbnail" src="<?php echo get_template_directory_uri(); ?>/images/dist/fpo-program-150.png" alt="Austin Artists show poster."> */ ?>
 						<p><span class="label">Now Playing</span><br />
 							<strong class="js-currentShow">KOOP Radio</strong> | <span class="js-currentShowTime"></span></p>
 					</div>
