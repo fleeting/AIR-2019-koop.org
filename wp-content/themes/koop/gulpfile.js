@@ -71,7 +71,9 @@ gulp.task('js', ['lint-js', 'modernizr'], function () {
     .pipe(concat(files.globs.js.dist.original))
     .pipe(gulp.dest(files.paths.js.dist))
     .pipe(rename(files.globs.js.dist.minified))
-    .pipe(uglify())
+    .pipe(uglify().on('error', function(e){
+      console.log(e);
+    }))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(files.paths.js.dist))
     .pipe(sizereport());

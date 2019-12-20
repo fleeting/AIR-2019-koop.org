@@ -33,6 +33,7 @@
     "postcss-import": "^11.1.0"
   },
   "dependencies": {
-    "del": "^3.0.0"
+    "del": "^3.0.0",
+    "moment": "^2.24.0"
   }
 }

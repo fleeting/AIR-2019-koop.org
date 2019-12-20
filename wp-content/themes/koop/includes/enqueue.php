@@ -6,7 +6,7 @@ function koop_enqueue() {
     wp_enqueue_script( 'ableplayercookie-js', 'https://raw.githack.com/ableplayer/ableplayer/master/thirdparty/js.cookie.js', 'jquery');
     wp_enqueue_script( 'ableplayer-js', 'https://raw.githack.com/ableplayer/ableplayer/master/build/ableplayer.min.js', 'jquery');
     wp_enqueue_script( 'fontawesome-js', 'https://kit.fontawesome.com/63478864d0.js');
-	wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/js/dist/app.min.js', false, filemtime($_SERVER["DOCUMENT_ROOT"] . '/wp-content/themes/koop/js/dist/app.min.js') );
+	wp_enqueue_script( 'theme-js', get_template_directory_uri() . '/js/dist/app.js', false, filemtime($_SERVER["DOCUMENT_ROOT"] . '/wp-content/themes/koop/js/dist/app.min.js') );
 
     wp_enqueue_style( 'bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
     wp_enqueue_style( 'ableplayer-css', 'https://raw.githack.com/ableplayer/ableplayer/master/build/ableplayer.min.css');

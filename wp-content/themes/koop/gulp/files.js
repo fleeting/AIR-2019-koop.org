@@ -1,6 +1,7 @@
 var paths = {
   components: {
     babelpolyfill: './node_modules/babel-polyfill/dist/',
+    moment: './node_modules/moment/min/',
   },
   css: {
     src: './css/src/',
@@ -22,6 +23,7 @@ var globs = {
   js: {
     src: [
       paths.js.vendor + 'modernizr-build.js',
+      paths.components.moment + 'moment.min.js',
       paths.js.vendor + 'menu.js',
       paths.js.src + 'theme.js'
     ],
