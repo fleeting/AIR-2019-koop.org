@@ -33,7 +33,8 @@ while ( have_posts() ) :
 				];
 
 				$programs = new WP_Query([
-					'post_type'   => 'programs'
+					'post_type'   => 'programs',
+					'posts_per_page' => -1
 				]);
 
 				if($programs->have_posts()) {
