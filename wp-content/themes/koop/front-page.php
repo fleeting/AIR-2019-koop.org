@@ -12,7 +12,8 @@
 					'post_type' => 'programs',
 					'posts_per_page' => 3,
 					'meta_key' => 'featured_program',
-					'meta_value' => 1
+					'meta_value' => 1,
+					'orderby' => 'rand'
 				);
 				$featured_programs = new WP_Query( $args );
 				while ( $featured_programs->have_posts() ) : $featured_programs->the_post();
