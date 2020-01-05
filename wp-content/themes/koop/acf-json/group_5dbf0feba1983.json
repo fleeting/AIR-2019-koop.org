@@ -41,6 +41,25 @@
             "maxlength": 120
         },
         {
+            "key": "field_5e1239fe99630",
+            "label": "Featured Program",
+            "name": "featured_program",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_5dc05886bea66",
             "label": "Featured Image",
             "name": "featured_image",
@@ -327,5 +346,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1576874855
+    "modified": 1578253653
 }

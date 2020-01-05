@@ -7,51 +7,40 @@
 					<h2>Featured Shows</h2>
 				</div>
 				<?php
-					//GET DATA
+				//GET DATA
+				$args = array(
+					'post_type' => 'programs',
+					'posts_per_page' => 3,
+					'meta_key' => 'featured_program',
+					'meta_value' => 1
+				);
+				$featured_programs = new WP_Query( $args );
+				while ( $featured_programs->have_posts() ) : $featured_programs->the_post();
+					$short_description = get_field('short_description');?>
+					<div class="col-lg-4">
+						<div class="featured_show">
+							<div class="image">
+								<?php $featured_image = get_field( 'featured_image' ); ?>
+								<img src="<?= $featured_image['url']; ?>" alt="<?= $featured_image['alt']; ?>">
+							</div>
 
+							<?php
+							if( have_rows( 'show_schedule' ) ):
+								echo '<p class="date">';
+								while ( have_rows( 'show_schedule' ) ) : the_row();
+									echo get_sub_field( 'day' ) . ', ' . get_sub_field( 'start_time' );
+								endwhile;
+								echo '</p>';
+							endif;
+							?>
 
-					//SHOW DATA
-					echo '
-						<div class="col-lg-4">
-							<div class="featured_show">
-								<div class="image">
-									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
-								</div>
-								<p class="date">Tuesday 10/15, 11:00am</p>
-								<div class="info">
-									<h3><a href="" title="">The Dark End of the Street</a></h3>
-									<p>Down-home Southern Soul from the heyday of Memphis, Nashville. & Muscle Shoals</p>
-								</div>
+							<div class="info">
+								<h3><a href="<?= get_the_permalink(); ?>" title="Permalink for <?= get_the_title(); ?>"><?= get_the_title(); ?></a></h3>
+								<p><?= $short_description; ?></p>
 							</div>
 						</div>
-
-						<div class="col-lg-4">
-							<div class="featured_show">
-								<div class="image">
-									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
-								</div>
-								<p class="date">Tuesday 10/15, 11:00am</p>
-								<div class="info">
-									<h3><a href="" title="">The Dark End of the Street</a></h3>
-									<p>Down-home Southern Soul from the heyday of Memphis, Nashville. & Muscle Shoals</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-4">
-							<div class="featured_show">
-								<div class="image">
-									<img class="" src="' . get_template_directory_uri() .'/images/dist/fpo-show.jpg" alt="">
-								</div>
-								<p class="date">Tuesday 10/15, 11:00am</p>
-								<div class="info">
-									<h3><a href="" title="">The Dark End of the Street</a></h3>
-									<p>Down-home Southern Soul from the heyday of Memphis, Nashville. & Muscle Shoals</p>
-								</div>
-							</div>
-						</div>
-					';
-				?>
+					</div>
+				<?php endwhile; wp_reset_postdata(); ?>
 			</div>
 		</div>
 	</section>
