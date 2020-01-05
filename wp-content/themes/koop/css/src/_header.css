@@ -24,6 +24,9 @@
 .main-navigation ul { margin: 0; padding: 0; list-style: none; }
 .main-navigation ul li { margin-right: 40px;}
 .main-navigation ul a, .main-navigation ul a:visited { color: #fff; border-bottom: 2px solid transparent; text-decoration: none; font-weight: bold; }
+
+.main-navigation ul .sub-menu a, .main-navigation ul .sub-menu a:visited { color: #7f58a5; border-bottom: 2px solid transparent; text-decoration: none; font-weight: bold; }
+
 .main-navigation ul a:hover { border-bottom: 2px solid; }
 .main-navigation ul ul { display: none; margin-top: 0px; margin-left: 25px; }
 .main-navigation ul ul { text-align: left; }
