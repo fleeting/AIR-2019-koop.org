@@ -289,7 +289,7 @@
             },
             {
                 "param": "post_template",
-                "operator": "!=",
+                "operator": "==",
                 "value": "default"
             }
         ],
@@ -315,5 +315,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1576876392
+    "modified": 1576981936
 }
