@@ -58,7 +58,49 @@
 				</div>
 
       <?php endwhile; endif; // end loop. ?>
+
+			<div>
+				<section id="program-blog">
+					<h2>Related Posts</h2>
+
+
+					<?php
+						$title_current_post = get_the_title();
+						$args = array(
+							'posts_per_page' => -1,
+						);
+						$loop = new WP_Query( $args ); ?>
+						<ul>
+						 <?php while ( $loop->have_posts() ) : $loop->the_post();
+						 $post_objects = get_field('program');
+						 if( $post_objects ): ?>
+						    <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+						        <?php setup_postdata($post);
+										$title_blog_post = get_the_title();
+										if ( $title_current_post == $title_blog_post ) : ?>
+											<li class="news_item">
+												<div class="row">
+													<div class="col-md-4 image">
+														<?php echo get_the_post_thumbnail(); ?>
+													</div>
+													<div class="col-md-8 text">
+														<div class="content">
+															<p class="meta">
+																<span class="flag"><a href="<?php echo $single_category_link ?>"><?php echo $single_category_name ?></a></span><span class="date"><?php echo get_the_date( 'M d, Y' ); ?></span></p>
+															<h3><a href="<?php echo get_the_permalink(); ?>" title=""><?php echo get_the_title(); ?></a></h3>
+															<p><?php echo get_the_excerpt(); ?></p>
+														</div>
+													</div>
+												</div>
+											</li>
+										<?php endif; ?>
+						    <?php endforeach; ?>
+						<?php endif; ?>
+					<?php endwhile; wp_reset_postdata(); ?>
+				</section>
+			</div>
 		</div>
+
 	</main><!-- #main -->
 </section><!-- #primary -->
 
