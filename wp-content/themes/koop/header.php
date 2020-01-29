@@ -21,7 +21,7 @@
 					<div class="current_program">
 						<?php /* <img class="show_thumbnail" src="<?php echo get_template_directory_uri(); ?>/images/dist/fpo-program-150.png" alt="Austin Artists show poster."> */ ?>
 						<p><span class="label">Now Playing</span><br />
-							<strong class="js-currentShow">KOOP Radio</strong> | <span class="js-currentShowTime"></span></p>
+							<strong class="js-currentShow">KOOP Radio</strong> | <span class="js-currentTrack"></span></p>
 					</div>
 				</div>
 

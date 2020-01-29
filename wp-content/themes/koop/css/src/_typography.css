@@ -12,3 +12,13 @@ img { max-width: 100%; height: auto; }
 a {
 	color: #005BBD;
 }
+
+ul.unstyled {
+	padding: 0;
+	list-style: none;
+}
+
+ul.inline li {
+	display: inline;
+	margin-right: 10px;
+}

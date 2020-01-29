@@ -139,32 +139,43 @@
     });
 
     /* Query Now Playing */
-    var nowPlayingRequest = new XMLHttpRequest();
-    nowPlayingRequest.open('GET', 'https://api.dubbletrack.com/api/v1/stations/koop/now_playing.json', true);
-    nowPlayingRequest.setRequestHeader('X-API-KEY', 'dt_c3iXID0tPL5Nenyc_TQkiQ');
-    nowPlayingRequest.setRequestHeader('X-API-SECRET', 'dts_wmcB-B4fWfkj7ysg8vCbkw');
+    function nowPlaying() {
+      var nowPlayingRequest = new XMLHttpRequest();
+      nowPlayingRequest.open('GET', 'https://api.dubbletrack.com/api/v1/stations/koop/now_playing.json', true);
+      nowPlayingRequest.setRequestHeader('X-API-KEY', 'dt_c3iXID0tPL5Nenyc_TQkiQ');
+      nowPlayingRequest.setRequestHeader('X-API-SECRET', 'dts_wmcB-B4fWfkj7ysg8vCbkw');
 
-    nowPlayingRequest.onload = function() {
-      if (this.status >= 200 && this.status < 400) {
-        var nowPlayingData = JSON.parse(this.response);
-        //console.log('results: ', nowPlayingData.data[0]);
+      nowPlayingRequest.onload = function() {
+        if (this.status >= 200 && this.status < 400) {
+          var nowPlayingData = JSON.parse(this.response);
+          //console.log('results: ', nowPlayingData.data[0]);
 
-        var currentShow = document.querySelector('.js-currentShow');
-        currentShow.innerHTML = nowPlayingData.data[0].show.title;
+          var currentShowContainer = document.querySelector('.js-currentShow');
+          currentShowContainer.innerHTML = nowPlayingData.data[0].show.title;
 
-        var currentShowTime = document.querySelector('.js-currentShowTime');
-        var startTime = moment(nowPlayingData.data[0].starts_at).format('dddd h:mma');
-        var endTime = moment(nowPlayingData.data[0].ends_at).format('h:mma');
-        currentShowTime.innerHTML = startTime + ' - ' + endTime;
-      } else {
-        console.log('status error: ', this);
-      }
-    };
+          var currentTrackContainer = document.querySelector('.js-currentTrack');
+          var currentTracks = nowPlayingData.data[0].tracks;
 
-    nowPlayingRequest.onerror = function() {
-      console.log('connection error: ', nowPlayingRequest);
-    };
+          if (currentTracks && currentTracks.length > 0) {
+            var currentTrack = currentTracks[0];
+            currentTrackContainer.innerHTML = currentTrack.artist_name + ' - ' + currentTrack.title;
+          } else {
+            var startTime = moment(nowPlayingData.data[0].starts_at).format('dddd h:mma');
+            var endTime = moment(nowPlayingData.data[0].ends_at).format('h:mma');
+            currentTrackContainer.innerHTML = startTime + ' - ' + endTime;
+          }
+        } else {
+          console.log('status error: ', this);
+        }
+      };
 
-    nowPlayingRequest.send();
+      nowPlayingRequest.onerror = function() {
+        console.log('connection error: ', nowPlayingRequest);
+      };
+
+      nowPlayingRequest.send();
+    }
+
+    var nowplayingInterval = window.setInterval(nowPlaying(), 120000);
   }, false);
 }());

@@ -15,7 +15,7 @@
 					<div class="program-right">
 		        <?php
 		        if( have_rows( 'show_schedule' ) ):
-		          echo '<h3>Show Times</h3> <ul>';
+		          echo '<h3>Show Times</h3> <ul class="unstyled">';
 		          while ( have_rows( 'show_schedule' ) ) : the_row();
 		            echo '<li><strong>' . get_sub_field( 'day' ) . '</strong>: ' . get_sub_field( 'start_time' ) . ' - ' . get_sub_field( 'end_time' ) . '</li>';
 		          endwhile;
@@ -24,23 +24,24 @@
 		        ?>
 
 		        <?php
-		        $social_networks = get_field( 'social_networks' );
-
-				if(!empty($social_networks['facebook_url']) || !empty($social_networks['twitter_url']) || !empty($social_networks['instagram_url'])):
-		        echo '<h3>Social Networks</h3> <ul>';
-		        foreach($social_networks as $network => $profile_url):
-							if(!empty($profile_url)):
-								if($network === 'facebook_url') { ?>
-		            	<li><a href="<?= $profile_url; ?>" title="Like us on Facebook">Facebook</a></li>
-								<?php } elseif($network === 'twitter_url') { ?>
-									<li><a href="<?= $profile_url; ?>" title="Follow us on Twitter">Twitter</a></li>
-								<?php } elseif($network === 'instagram_url') { ?>
-									<li><a href="<?= $profile_url; ?>" title="Follow us on Instagram">Instagram</a></li>
-								<?php }
-		          endif;
-		        endforeach;
-		        echo '</ul>';
-				endif;
+						$social_networks = get_field( 'social_networks' );
+						if(!empty($social_networks['facebook_url']) || !empty($social_networks['twitter_url']) || !empty($social_networks['instagram_url'])):
+								echo '<h3>Social Networks</h3> <ul class="unstyled inline">';
+								foreach($social_networks as $network => $profile_url):
+									if(!empty($profile_url)):
+										if($network === 'facebook_url') { ?>
+											<li><a href="<?= $profile_url; ?>"><i class="fab fa-facebook-f fa-2x" title="Like us on Facebook" aria-hidden="true"></i></a></li>
+										<?php } elseif($network === 'twitter_url') { ?>
+											<li><a href="<?= $profile_url; ?>" ><i class="fab fa-twitter fa-2x" title="Follow us on Twitter" aria-hidden="true"></i></a></li>
+										<?php } elseif($network === 'instagram_url') { ?>
+											<li><a href="<?= $profile_url; ?>" ><i class="fab fa-instagram fa-2x" title="Follow us on Instagram" aria-hidden="true"></i></a></li>
+										<?php } elseif($network === 'website_url') { ?>
+											<!--<li><a href="<?= $website_url; ?>" >Visit Our Website</a></li>-->
+										<?php }
+									endif;
+								endforeach;
+								echo '</ul>';
+						endif;
 		        ?>
 
 		        <?php
@@ -59,10 +60,9 @@
 
       <?php endwhile; endif; // end loop. ?>
 
-			<div>
+			<div style="clear:both;">
 				<section id="program-blog">
-					<h2>Related Posts</h2>
-
+					<h2>Show Posts</h2>
 
 					<?php
 						$title_current_post = get_the_title();
