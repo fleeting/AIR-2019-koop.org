@@ -55,3 +55,7 @@
 .category-select select option {
     font-weight:normal;
 }
+
+#program-blog ul {
+  list-style-type: none;
+}

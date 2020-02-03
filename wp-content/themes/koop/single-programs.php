@@ -62,26 +62,34 @@
 
 			<div style="clear:both;">
 				<section id="program-blog">
-					<h2>Show Posts</h2>
 
 					<?php
-						$title_current_post = get_the_title();
+						$current_post = get_the_ID();
 						$args = array(
 							'posts_per_page' => -1,
+							'meta_query' => array(
+								array(
+									'key'   => 'program', 
+									'value' =>  $current_post,
+								),
+							) 
 						);
 						$loop = new WP_Query( $args ); ?>
 						<ul>
 						 <?php while ( $loop->have_posts() ) : $loop->the_post();
-						 $post_objects = get_field('program');
-						 if( $post_objects ): ?>
-						    <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
-						        <?php setup_postdata($post);
-										$title_blog_post = get_the_title();
-										if ( $title_current_post == $title_blog_post ) : ?>
+						 //$post_objects = get_field('program');
+						 //if( $post_objects ): ?>
+						 	
+						    <?php //foreach($post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+								<?php //setup_postdata($post);
+								
+										//$title_blog_post = get_the_title();
+										//if ( $title_current_post == $title_blog_post ) : ?>
 											<li class="news_item">
 												<div class="row">
 													<div class="col-md-4 image">
-														<?php echo get_the_post_thumbnail(); ?>
+														<?php $featured_image = get_field( 'featured_image' ); ?>
+														<img src="<?= $featured_image['url']; ?>" alt="<?= $featured_image['alt']; ?>">
 													</div>
 													<div class="col-md-8 text">
 														<div class="content">
@@ -93,10 +101,10 @@
 													</div>
 												</div>
 											</li>
-										<?php endif; ?>
-						    <?php endforeach; ?>
-						<?php endif; ?>
-					<?php endwhile; wp_reset_postdata(); ?>
+										<?php //endif; ?>
+						    <?php //endforeach; ?>
+						<?php //endif; ?>
+					<?php endwhile; $loop->reset_postdata(); ?>
 				</section>
 			</div>
 		</div>
