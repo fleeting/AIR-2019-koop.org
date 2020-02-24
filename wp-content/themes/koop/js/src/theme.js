@@ -176,6 +176,7 @@
       nowPlayingRequest.send();
     }
 
-    var nowplayingInterval = window.setInterval(nowPlaying(), 120000);
+    nowPlaying();
+    var nowplayingInterval = window.setInterval(nowPlaying, 120000);
   }, false);
 }());
