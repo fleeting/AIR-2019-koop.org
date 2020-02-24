@@ -178,5 +178,46 @@
 
     nowPlaying();
     var nowplayingInterval = window.setInterval(nowPlaying, 120000);
+
+    /* Query Program's Playlist */
+    function programsPlaylist(programID) {
+      var playlistRequest = new XMLHttpRequest();
+      playlistRequest.open('GET', 'https://api.dubbletrack.com/api/v1/stations/koop/shows/' + programID + '/airings.json?include=tracks', true);
+      playlistRequest.setRequestHeader('X-API-KEY', 'dt_c3iXID0tPL5Nenyc_TQkiQ');
+      playlistRequest.setRequestHeader('X-API-SECRET', 'dts_wmcB-B4fWfkj7ysg8vCbkw');
+
+      playlistRequest.onload = function() {
+        if (this.status >= 200 && this.status < 400) {
+          var playlistData = JSON.parse(this.response);
+          //console.log('results: ', playlistData.data[0]);
+          var playlistTracks = playlistData.data[0].tracks;
+          var playlistTitle = document.querySelector('.js-programPlaylistTitle');
+          var playlistContainer = document.querySelector('.js-programPlaylist');
+
+          var showDatetime = moment(playlistData.data[0].starts_at).format('MMMM DD, YYYY');
+          playlistTitle.innerHTML = 'Playlist for ' + showDatetime;
+
+          var tracksList = '';
+          playlistTracks.forEach(function(item, i) {
+            var trackPlayedAt = moment(item.played_at).format('HH:mm a');
+            tracksList += '<li><strong>' + item.artist_name + '</strong> - ' + item.title + ' (' + trackPlayedAt + ')</li>';
+          });
+
+          playlistContainer.innerHTML = tracksList;
+        } else {
+          console.log('status error: ', this);
+        }
+      };
+
+      playlistRequest.onerror = function() {
+        console.log('connection error: ', playlistRequest);
+      };
+
+      playlistRequest.send();
+    }
+
+    if(programDoubletrackID !== undefined && programDoubletrackID !== null) {
+      programsPlaylist(programDoubletrackID);
+    }
   }, false);
 }());

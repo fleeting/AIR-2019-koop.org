@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<!-- TODO: Just dumping out all the data for now. Need to style this page pending suggestions from Design. -->
+<?php $programDoubletrackID = get_field( 'doubletrack_show_id' ); ?>
 
 <section id="primary" class="content-area">
 	<main id="main" class="site-main">
@@ -69,20 +69,20 @@
 							'posts_per_page' => -1,
 							'meta_query' => array(
 								array(
-									'key'   => 'program', 
+									'key'   => 'program',
 									'value' =>  $current_post,
 								),
-							) 
+							)
 						);
 						$loop = new WP_Query( $args ); ?>
 						<ul>
 						 <?php while ( $loop->have_posts() ) : $loop->the_post();
 						 //$post_objects = get_field('program');
 						 //if( $post_objects ): ?>
-						 	
+
 						    <?php //foreach($post_objects as $post): // variable must be called $post (IMPORTANT) ?>
 								<?php //setup_postdata($post);
-								
+
 										//$title_blog_post = get_the_title();
 										//if ( $title_current_post == $title_blog_post ) : ?>
 											<li class="news_item">
@@ -107,8 +107,27 @@
 					<?php endwhile; $loop->reset_postdata(); ?>
 				</section>
 			</div>
-		</div>
 
+			<?php if(!empty($programDoubletrackID)): ?>
+				<div id="accordionGroup" class="Accordion">
+					<h3>
+						<button aria-expanded="false" class="Accordion-trigger" aria-controls="sect01" id="accordion01id">
+							<span class="Accordion-title">
+								<span class="js-programPlaylistTitle"></span>
+								<span class="Accordion-icon"></span>
+							</span>
+						</button>
+					</h3>
+
+					<div id="sect01" role="region" aria-labelledby="accordion01id" class="Accordion-panel" hidden="">
+						<ul class="js-programPlaylist"></ul>
+					</div>
+				</div>
+				<script>
+				var programDoubletrackID = '<?= $programDoubletrackID; ?>';
+				</script>
+			<?php endif; ?>
+		</div>
 	</main><!-- #main -->
 </section><!-- #primary -->
 
