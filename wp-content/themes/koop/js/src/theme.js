@@ -190,7 +190,7 @@
         if (this.status >= 200 && this.status < 400) {
           var playlistData = JSON.parse(this.response);
           //console.log('results: ', playlistData.data[0]);
-          var playlistTracks = playlistData.data[0].tracks;
+          var playlistTracks = playlistData.data[0].tracks.reverse();
           var playlistTitle = document.querySelector('.js-programPlaylistTitle');
           var playlistContainer = document.querySelector('.js-programPlaylist');
 
