@@ -45,7 +45,7 @@
 								<button class="menu-button"><span class="sr-only">Menu</span></button>
 
 								<div id="site-header-menu" class="site-header-menu">
-									<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e('Primary Menu', 'yourtheme'); ?>">
+									<nav id="site-navigation" class="main-navigation" role="navigation" aria-label="<?php esc_attr_e('Primary Menu', 'koop'); ?>">
 										<?php
 											wp_nav_menu(array(
 												'theme_location' => 'primary',

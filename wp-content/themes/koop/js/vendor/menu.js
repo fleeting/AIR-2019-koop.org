@@ -166,3 +166,21 @@ https://github.com/wpaccessibility/a11ythemepatterns/tree/master/menu-keyboard-a
         }
     });
 })(jQuery);
+
+document.addEventListener("DOMContentLoaded", function () {
+    'use strict';
+
+    // Mobile Menu Toggle Functionality
+    var mobileMenuIcon = document.querySelector('.menu-button');
+
+    if (mobileMenuIcon) {
+        var mobileMenuToggle = function() {
+          mobileMenuIcon.addEventListener('click', function(e){
+            e.preventDefault();
+            document.querySelector('#site-header-menu').classList.toggle('toggled-on');
+          });
+        };
+    
+        mobileMenuToggle();
+      }
+});
